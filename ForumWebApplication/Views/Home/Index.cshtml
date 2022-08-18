@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Forum";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@User.Identity.Name</p>
+
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Log out" />
+    </form>
+}
+else
+{
+    <a asp-controller="Account" asp-action="Login">Log in</a><br /><br />
+    <a asp-controller="Account" asp-action="Register">Registration</a>
+}
