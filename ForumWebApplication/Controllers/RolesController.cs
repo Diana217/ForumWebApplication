@@ -16,7 +16,7 @@ namespace ForumWebApplication.Controllers
             _userManager = userManager;
         }
         public ActionResult Index() => View(_roleManager.Roles.ToList());
-        public ActionResult Create() => View(_userManager.Users.ToList());
+        public ActionResult UserList() => View(_userManager.Users.ToList());
 
         public async Task<IActionResult> Edit(string userId)
         {
